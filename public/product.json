@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder",
+    "description": "Create professional, ATS-friendly resumes with ready-made templates.",
+    "price": 9.99,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF",
+      "Custom sections",
+      "Unlimited downloads"
+    ],
+    "icon": "https://i.ibb.co.com/GQKbZmF3/writing-2327400-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume",
+    "description": "Build a powerful resume with advanced customization and expert tools.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": [
+      "200+ premium templates",
+      "ATS optimization",
+      "AI content suggestions",
+      "Unlimited PDF exports",
+      "Cover letter builder"
+    ],
+    "icon": "https://i.ibb.co.com/HpTtR492/social-media.png"
+  },
+  {
+    "id": 3,
+    "name": "Career Starter",
+    "description": "Everything you need to create your first professional job application.",
+    "price": 19.99,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "50+ resume templates",
+      "Job application tracker",
+      "PDF export",
+      "Basic ATS check",
+      "Career tips"
+    ],
+    "icon": "https://i.ibb.co.com/wrRbCSX9/shopping-cart.png"
+  },
+  {
+    "id": 4,
+    "name": "Job Seeker Pro",
+    "description": "Manage your entire job search with advanced career-building tools.",
+    "price": 12.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Unlimited resumes",
+      "Job application tracker",
+      "AI resume suggestions",
+      "Cover letter generator",
+      "Interview preparation"
+    ],
+    "icon": "https://i.ibb.co.com/cp93jsJ/portfolio.png"
+  },
+  {
+    "id": 5,
+    "name": "Premium Career",
+    "description": "Get a complete career toolkit designed for serious job seekers.",
+    "price": 99.99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best-seller",
+    "features": [
+      "All premium templates",
+      "Unlimited resumes",
+      "AI-powered suggestions",
+      "Advanced ATS analysis",
+      "Priority support"
+    ],
+    "icon": "https://i.ibb.co.com/HDd85TWY/operation.png"
+  },
+  {
+    "id": 6,
+    "name": "Cover Letter Pro",
+    "description": "Create personalized cover letters that match your resume and job.",
+    "price": 7.99,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "50+ cover letter templates",
+      "AI writing assistance",
+      "Job-specific customization",
+      "PDF export",
+      "Unlimited revisions"
+    ],
+    "icon": "https://i.ibb.co.com/FkZsyc9x/design-tool.png"
+  }
+ 
+]
