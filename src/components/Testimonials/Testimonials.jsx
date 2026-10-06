@@ -17,7 +17,7 @@ const Testimonials = () => {
       </div>
 
       <div className="flex justify-center">
-        {values.map((val) => (
+        {values.map((val) => (          
           <div className="card border-sky-100 w-96 ">
             <div className="card-body">
                 <img src={val.img} className="w-32" alt="" srcset="" />

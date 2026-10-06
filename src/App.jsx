@@ -1,5 +1,6 @@
 
 
+import { useState } from "react";
 import "./App.css";
 import Compnay from "./components/Company/Compnay";
 import Hero from "./components/Hero/Hero";
@@ -16,14 +17,23 @@ const productsPromise=fetch("/public/product.json")
 function App() {
 
 
-  return <div >
+  const [selproducts,setproducts]=useState([])
 
-  <Navbar></Navbar>
+  const handleProdcut=(prod)=>{
+    const newproductAdd=[...selproducts,prod]
+    setproducts(newproductAdd)
+  }
+
+
+  return (
+  <div >
+
+  <Navbar selproducts={selproducts}></Navbar>
   <Hero></Hero>
   <Compnay></Compnay>
-  <PremiumTools></PremiumTools>
-  <Products productsPromise={productsPromise}></Products>
-  <Testimonials></Testimonials>
+  <PremiumTools selproducts={selproducts}></PremiumTools>
+  <Products productsPromise={productsPromise} handleProdcut={handleProdcut} ></Products>
+  <Testimonials ></Testimonials>
 
 
 
@@ -31,7 +41,8 @@ function App() {
  
 
   
-  </div>;
+  </div>
+  );
 }
 
 export default App;

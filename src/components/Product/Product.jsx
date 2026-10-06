@@ -1,8 +1,13 @@
 import { Check } from "lucide-react";
 import React from "react";
 
-const Product = ({ product }) => {
-  console.log(product);
+const Product = ({ product,handleProdcut }) => {
+
+  const handleProductAddCart=(product)=>{
+    handleProdcut(product)
+
+  }
+  
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-sm max-w-[1200px] mx-auto ">
@@ -36,7 +41,7 @@ const Product = ({ product }) => {
           </div>
 
           <div className="mt-6">
-            <button className="btn btn-primary btn-block">Buy Now</button>
+            <button className="btn btn-primary btn-block" onClick={()=>handleProductAddCart(product)}>Buy Now</button>
           </div>
         </div>
       </div>
