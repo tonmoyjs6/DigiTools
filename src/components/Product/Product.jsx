@@ -1,12 +1,23 @@
 import { Check } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 
-const Product = ({ product,handleProdcut }) => {
+const Product = ({val, product,handleProdcut, addtocartShow,selproducts,handleBuyNow,afterclick}) => {
 
+ 
+// console.log(afterclick)
   const handleProductAddCart=(product)=>{
     handleProdcut(product)
 
   }
+
+  const handleClick=(id)=>{
+      handleBuyNow(id)
+
+      
+  }
+
+
+  console.log(val)
   
   return (
     <div>
@@ -41,7 +52,18 @@ const Product = ({ product,handleProdcut }) => {
           </div>
 
           <div className="mt-6">
-            <button className="btn btn-primary btn-block" onClick={()=>handleProductAddCart(product)}>Buy Now</button>
+            <button className="btn btn-primary btn-block" 
+            onClick={()=>
+            {handleProductAddCart(product),
+           handleClick(product.id)}}>
+        
+           {
+            
+
+            afterclick.find((value)=>value==product.id)?"add to cart":"buy now"
+           }
+           
+           </button>
           </div>
         </div>
       </div>
