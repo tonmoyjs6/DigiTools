@@ -1,7 +1,7 @@
 import React from "react";
 
-const CartCard = ({cProduct}) => {
-    console.log(cProduct)
+const CartCard = ({cProduct,handleRemove}) => {
+   
   return (
 
     <div>
@@ -14,14 +14,22 @@ const CartCard = ({cProduct}) => {
           <h2 className="ml-4 font-bold text-2xl">
             {cProduct.name}
           </h2>
+          
+
+          
          </div>
+
+         <div className="flex flex-col text-2xl">
+            price:${cProduct.price}
+          </div>
           <div className="justify-end card-actions ">
-            <button className="btn btn-error mb-20">Remove</button>
+            <button className="btn btn-error mb-20" onClick={()=>handleRemove(cProduct)}>Remove</button>
           </div>
         </div>
+       
       </div>
      
-
+     
     </div>
   );
 };

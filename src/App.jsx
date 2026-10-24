@@ -1,6 +1,6 @@
 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Compnay from "./components/Company/Compnay";
 import Hero from "./components/Hero/Hero";
@@ -25,6 +25,8 @@ function App() {
   const [afterclick,setClick]=useState([])
   const [val,setVal]=useState([])
 
+  const [totalCartPrice,setTotalCartPrice]=useState(0)
+
   const handleProdcut=(prod)=>{
     const newproductAdd=[...selproducts,prod]
     // console.log(prod,"handle")
@@ -42,12 +44,6 @@ function App() {
   const newClick=[...afterclick,id]
   setClick(newClick)
   
-  // const findProdcut=afterclick.find(prId=>prId==id)
-  
-
-  // if(findProdcut){
-  //   setVal(findProdcut)
-  // }
 
  
     
@@ -68,6 +64,22 @@ function App() {
   }
 
 
+
+
+
+  const total=selproducts.reduce((ac,curValue)=>ac+curValue.price,0)
+  
+
+  const handleRemove=(removeproduct)=>{
+
+    const afterremoveProdcut=selproducts.filter(product=>product!==removeproduct)
+    setproducts(afterremoveProdcut)
+    
+    
+
+  }
+
+
   return (
   <>
 
@@ -80,11 +92,14 @@ function App() {
             <p className='text-center mt-5'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity</p>
 
             <button onClick={()=>setProductShow(true)} className="btn btn-active btn-info mt-5">Products</button>
-            <button onClick={()=>setProductShow(false)} className="btn btn-active btn-info ml-2 mt-5">Cart({selproducts.length})</button>
+            <button onClick={()=>{
+              setProductShow(false)
+           
+              }} className="btn btn-active btn-info ml-2 mt-5">Cart({selproducts.length})</button>
 
    </div>
     {
-      productShow?  <Products productsPromise={productsPromise} val={val} handleProdcut={handleProdcut} addtocartShow={addtocartShow} selproducts={selproducts} handleBuyNow={handleBuyNow} afterclick={afterclick}></Products>:<Cart handleProceed={handleProceed} selproducts={selproducts}></Cart>
+      productShow?  <Products productsPromise={productsPromise} val={val} handleProdcut={handleProdcut} addtocartShow={addtocartShow} selproducts={selproducts} handleBuyNow={handleBuyNow} afterclick={afterclick}></Products>:<Cart handleProceed={handleProceed} selproducts={selproducts} total={total}  handleRemove={handleRemove}></Cart>
  
     }
   <Testimonials ></Testimonials>
